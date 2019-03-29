@@ -1,3 +1,2 @@
 def solution(n):
-    answer = map(int, reversed(str(n)))
-    return list(answer)
+    return list(map(int, reversed(str(n))))
