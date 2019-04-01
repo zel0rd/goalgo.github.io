@@ -36,7 +36,8 @@ folder_list = []
 file_list = []
 file_type = []
 file_dict = {}
-
+user_list = ['zel0rd','inje','chanki','ComSenpai','sejunoh','untaek']
+user_dict = {}
 
 dirname = os.getcwd()
 
@@ -48,15 +49,38 @@ search(dirname)
 file_type = list(set(file_type))
 
 
+
 file_dict = { i : 0 for i in file_type}
+user_dict = { i : 0 for i in user_list}
+
 
 for i in file_list:
     ext = os.path.splitext(i)[-1]
     if ext in file_dict.keys():
         file_dict[ext] += 1
+    
+    for name in user_list:
+        if name in i:
+            user_dict[name] += 1
+    
 
 del file_dict['']
 print(file_dict)
+print(user_dict)
+
+
+#user pie chart
+
+labels = user_dict.keys()
+sizes = user_dict.values()
+fig1, ax1 = plt.subplots()
+ax1.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
+ax1.axis('equal')
+
+plt.savefig('./reference/user_' + s)
+
+
+#file_dict pie chart
 
 now = time.localtime()
 s = "%04d-%02d-%02d_%02d-%02d-%02d.png" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
@@ -67,5 +91,5 @@ fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
 ax1.axis('equal')
 
-plt.savefig('./reference/' + s + '.png')
+plt.savefig('./reference/lanuage_' + s)
 
