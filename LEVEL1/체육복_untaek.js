@@ -8,7 +8,8 @@ function solution(n, lost, reserve) {
     var answer = 0;
     let students = new Array(n).fill(1);
     lost.forEach(i => students[i-1] = 0)
-    reserve.forEach(i => students[i-1] = 2)
+    reserve.forEach(i => students[i-1]++)
+    
     for(let i=0; i<n; i++) {
         if(students[i] == 0) {
             if(0 < i && i < n && students[i-1] == 2) {
