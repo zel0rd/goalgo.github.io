@@ -1,4 +1,4 @@
-public class 다리를_지나는_  {
+public class Truck_passing_bridge  {
     public static int solution(int bridge_length, int weight, int[] truck_weights) {
         int answer = 0;
         int total;
