@@ -13,7 +13,7 @@ public class 다리를_지나는_  {
         }
         
         // answer 구하기
-        for (; true; ) {
+        while(true){
             total = 0;
 
             // 1부터 length 까지의 무게를 더하기.
