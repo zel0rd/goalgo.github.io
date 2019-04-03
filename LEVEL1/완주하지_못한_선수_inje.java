@@ -8,7 +8,7 @@ public static String solution(String[] participant, String[] completion) {
                 break;
             }
         }
-        if(answer == ""){
+        if(answer.equal("")){
             answer = participant[participant.length-1];
         }
 
