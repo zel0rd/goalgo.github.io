@@ -7,6 +7,7 @@ Created on Mon Apr  1 13:58:19 2019
 """
 
 import os
+import time
 from datetime import date
 import matplotlib.pyplot as plt
 import matplotlib.pyplot as pyplot
@@ -68,6 +69,8 @@ del file_dict['']
 print(file_dict)
 print(user_dict)
 
+now = time.localtime()
+s = "%04d-%02d-%02d_%02d-%02d-%02d.png" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
 
 #user pie chart
 
@@ -82,8 +85,6 @@ plt.savefig('./reference/user_' + s)
 
 #file_dict pie chart
 
-now = time.localtime()
-s = "%04d-%02d-%02d_%02d-%02d-%02d.png" % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
 
 labels = file_dict.keys()
 sizes = file_dict.values()
