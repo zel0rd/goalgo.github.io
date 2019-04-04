@@ -9,13 +9,13 @@
 - 문제와 작성자 사이에도 _ 을 추가한다.
 
 ### 2019-04-01-15:30
-Language_Rate
+Language distribution
 
-![](https://github.com/zel0rd/2019_AlgorithmStudy/blob/master/reference/lanuage_2019-04-01_15-28-02.png)
+![](reference/lanuage_2019-04-01_15-28-02.png)
 
-User_Rate
+User distribution
 
-![](https://github.com/zel0rd/2019_AlgorithmStudy/blob/master/reference/user_2019-04-01_15-27-46.png)
+![](reference/user_2019-04-01_15-27-46.png)
 
 ## Reference
 ![programmers](reference/programmers_ico.png)
