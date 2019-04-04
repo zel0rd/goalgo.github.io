@@ -1,9 +1,14 @@
-// 테스트12 빼고 모두 통과.  피드백좀 주시오
+// 테스트12 빼고 모두 통과 >> 모두 통과
 
 public static String solution(String number, int k) {
         int count = 0;
 
         while (k != 0){
+            if(count+k+1>answer.length()){
+                answer = answer.substring(0,answer.length()-k);
+                break;
+            }
+                
             int max_position = count;
             int max = number.charAt(max_position);
 
