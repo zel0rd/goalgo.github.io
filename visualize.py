@@ -18,7 +18,7 @@ def search(dirname):
         filenames = os.listdir(dirname)
         for filename in filenames:
             full_filename = os.path.join(dirname, filename)
-            
+
             if os.path.isdir(full_filename):
                 folder_list.append(full_filename)
                 search(full_filename)
@@ -29,10 +29,10 @@ def search(dirname):
                 file_type.append(ext)
                 if ext == '.py':
                     file_list.append(full_filename)
-                    
+
     except PermissionError:
         pass
-    
+
 folder_list = []
 file_list = []
 file_type = []
@@ -59,11 +59,11 @@ for i in file_list:
     ext = os.path.splitext(i)[-1]
     if ext in file_dict.keys():
         file_dict[ext] += 1
-    
+
     for name in user_list:
         if name in i:
             user_dict[name] += 1
-    
+
 
 del file_dict['']
 print(file_dict)
@@ -93,4 +93,3 @@ ax1.pie(sizes, labels=labels, autopct='%1.1f%%', shadow=True, startangle=90)
 ax1.axis('equal')
 
 plt.savefig('./reference/lanuage_' + s)
-
